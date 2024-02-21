@@ -15,14 +15,14 @@ namespace ConsoleApp1
             Console.WriteLine("1 - Круг");
             Console.WriteLine("2 - Треугольник");
             string vibor = Console.ReadLine();
-            if (vibor == "Круг" || vibor == "круг" || vibor == "1")
+            if (vibor == "Круг" || vibor == "круг" || vibor == "1") // капча ввода для выбора
             {
                 Console.WriteLine("Выбран круг. Укажите радиус круга");
-                int rkrug = Convert.ToInt32(Console.ReadLine());
-                double Skrug = (rkrug * 2) * 3.14;
+                int rkrug = Convert.ToInt32(Console.ReadLine()); // выбор какой будет радиус у круга
+                double Skrug = (rkrug * 2) * 3.14; // подсчет площади круга
                 Console.WriteLine($"Площадь круга: {Skrug}");
             }
-            else if (vibor == "Треугольник" || vibor == "треугольник" || vibor == "2")
+            else if (vibor == "Треугольник" || vibor == "треугольник" || vibor == "2") // капча ввода для выбора
             {
                 Console.WriteLine("Выбран треугольник, укажите длину всех сторон и высоту");
                 Console.WriteLine("Укажите длину стороны A");
@@ -33,15 +33,15 @@ namespace ConsoleApp1
                 int c = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Укажите высоту H");
                 int h = Convert.ToInt32(Console.ReadLine());
-                if (a > b || a > c || b > a || b > c || c > a || c > b)
+                if (a > b || a > c || b > a || b > c || c > a || c > b) // проверка неравнобедренности треугольника
                 {
                     Console.WriteLine("Треугольник неравнобедренный");
                 }
-                else if (a == b || a == c || b == a || b == c || c == a || c == b)
+                else if (a == b || a == c || b == a || b == c || c == a || c == b) // проверка равнобедренности треугольника
                 {
                     Console.WriteLine("Треугольник равнобедренный");
                 }
-                double sTriangle = (a * h) / 2;
+                double sTriangle = (a * h) / 2; // подсчет площади треугольника
                 Console.WriteLine($"Площадь треугольника: {sTriangle}");
             }    
             Console.ReadKey();
